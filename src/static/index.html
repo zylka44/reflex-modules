@@ -6,12 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reflex</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
-        <h1>Reflex Game</h1>
+        <!--wersja Bootsrap-->
+        <!--nagłówek-->
+        <div class="container my-5">
+          <div class="row">
+            <!--nazwa gry-->
+            <div class="col-xs-12 col-md-2 order-md-2 font-weight-bold h1">
+                REFLEX
+              </div>
+    
+            <!--życia i punkty-->
+            <div class="col-xs-12 col-md-5 h2">
+              <div class="row">
+                <div class="col">życia: <div id="lifes"></div></div>
+                <div class="col">punkty: <div id="points">0</div></div>
+              </div>
+            </div>
+  
+            <!--czas-->
+            <div class="col-xs-12 col-md-5 order-md-3 h2">
+              czas: <div id="time">60</div> sek.
+            </div>
+          </div>
+        </div>
+  
+        <!--plansza-->
+        <div class="container">
+          <!--alert-->
+          <div id="alert" class="row h3">Złap zielony kwadrat!</div>
+  
+          <!--kwadraty-->
+          <div class="row">
+              <div id="board"></div> 
+              <div id="curtain"></div>
+          </div>
+  
+          <!--start i reset-->
+          <div class="row">
+              <div id="start" class="col-2 h3 m-1">START</div>
+              <div id="reset" class="col-2 h3 m-1">RESET</div>
+          </div>
+  
+          <!--rozmiar planszy-->
+          <div class="row my-4">
+            <div class="col-3 text-right h3">rozmiar planszy:</div>
+            <div class="col-3 text-left">
+              <div class="row">
+                <div class="col">
+                    <input type="text" id="size" class="form-control text-center mb-2" placeholder="rozmiar" value=""> 
+                </div>
+                <div class="col">
+                    <button id="dimensionButton" class="btn btn-success">ustaw</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <script src="bundle.js"></script>
     </body>
-
+    <script src="bundle.js"></script>
 </html>
